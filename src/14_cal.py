@@ -21,4 +21,27 @@ and does the following:
 
 import sys
 import calendar
-from datetime import datetime
+from datetime import date
+
+
+def user_calender():
+      userinput = sys.argv
+      try:
+            if len(userinput) == 1:
+                year = date.today().year
+                month = (date.today().month)
+                print(calendar.month(year,month))
+            elif len(userinput) == 2:
+                  print(calendar.month(2019,int(userinput[1])))
+            elif len(userinput) == 3:
+                  print(calendar.calendar(int(userinput[2]), int(userinput[1])))
+      except:
+        print('kindly print the year and months in numbers')
+
+user_calender()
+      
+      
+      
+      
+
+   
